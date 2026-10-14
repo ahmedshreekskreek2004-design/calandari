@@ -1,0 +1,178 @@
+
+/* إعدادات عامة */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 30px 20px;
+    background-color: #f4f6f9;
+    color: #333;
+}
+
+/* الحاوية الرئيسية */
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* العناوين */
+h1 {
+    text-align: center;
+    color: #2563eb;
+    margin-bottom: 10px;
+}
+
+h2 {
+    text-align: center;
+    margin: 20px 0;
+}
+
+/* التاريخ */
+#selectedDate {
+    text-align: center;
+    color: #555;
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+/* الفورم */
+#bookingForm {
+    max-width: 500px;
+    margin: 0 auto 35px;
+    padding: 25px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* كل حقل */
+#bookingForm div {
+    margin-bottom: 18px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+/* حقول الإدخال */
+input,
+select {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 7px;
+    background-color: white;
+}
+
+input:focus,
+select:focus {
+    outline: none;
+    border-color: #2563eb;
+    box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.15);
+}
+
+/* زر الحفظ */
+button {
+    width: 100%;
+    padding: 13px;
+    background-color: #2563eb;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+button:hover {
+    background-color: #1d4ed8;
+}
+
+/* جدول الساعات */
+#hoursTable {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 12px;
+    margin: 20px auto;
+    max-width: 900px;
+}
+
+/* مربع الساعة */
+.hour {
+    min-height: 85px;
+    padding: 12px 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    text-align: center;
+    overflow-wrap: anywhere;
+
+    background-color: white;
+    border: 1px solid #d1d5db;
+    border-radius: 9px;
+
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* الساعة المحجوزة */
+.hour.selected {
+    background-color: #bbf7d0;
+    border: 2px solid #16a34a;
+    color: #166534;
+}
+
+/* اسم الشخص داخل الساعة */
+.hour p {
+    margin: 0;
+    font-size: 13px;
+    font-weight: normal;
+}
+
+/* الشاشات المتوسطة */
+@media (min-width: 600px) {
+    #hoursTable {
+        grid-template-columns: repeat(6, minmax(0, 1fr));
+    }
+}
+
+/* الشاشات الكبيرة */
+@media (min-width: 900px) {
+    #hoursTable {
+        grid-template-columns: repeat(8, minmax(0, 1fr));
+    }
+}
+
+/* الهواتف */
+@media (max-width: 400px) {
+    body {
+        padding: 20px 12px;
+    }
+
+    #bookingForm {
+        padding: 18px;
+    }
+
+    #hoursTable {
+        gap: 7px;
+    }
+
+    .hour {
+        min-height: 70px;
+        font-size: 14px;
+    }
+}
+.actions {
+    display: flex;
+    gap: 8px;
+    margin-top: 12px;
+}

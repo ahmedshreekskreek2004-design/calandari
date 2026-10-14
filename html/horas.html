@@ -1,0 +1,92 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Horario</title>
+    <link rel="stylesheet" href="../css/horas.css">
+</head>
+<body>
+
+    <h1>Mi horario</h1>
+
+    <!-- Fecha seleccionada -->
+    <h2 id="selectedDate">Fecha seleccionada</h2>
+
+    <!-- Formulario -->
+    <form id="bookingForm">
+
+        <div>
+            <label for="name">Nombre:</label>
+            <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Introduce tu nombre"
+                required
+            >
+        </div>
+
+        <div>
+            
+<label for="startHour">Hora de inicio:</label>
+<select id="startHour" name="startHour" required>
+    <option value="">Selecciona una hora</option>
+    <option value="00">00:00</option>
+    <option value="01">01:00</option>
+    <option value="02">02:00</option>
+    <option value="03">03:00</option>
+    <option value="04">04:00</option>
+    <option value="05">05:00</option>
+    <option value="06">06:00</option>
+    <option value="07">07:00</option>
+    <option value="08">08:00</option>
+    <option value="09">09:00</option>
+    <option value="10">10:00</option>
+    <option value="11">11:00</option>
+    <option value="12">12:00</option>
+    <option value="13">13:00</option>
+    <option value="14">14:00</option>
+    <option value="15">15:00</option>
+    <option value="16">16:00</option>
+    <option value="17">17:00</option>
+    <option value="18">18:00</option>
+    <option value="19">19:00</option>
+    <option value="20">20:00</option>
+    <option value="21">21:00</option>
+    <option value="22">22:00</option>
+    <option value="23">23:00</option>
+</select>
+        </div>
+
+        <div>
+            <label for="duration">Duración (horas):</label>
+            <input
+                type="number"
+                id="duration"
+                name="duration"
+                min="1"
+                max="24"
+                step="1"
+                placeholder="Introduce la duración"
+                required
+            >
+        </div>
+
+        <button type="submit">Guardar</button>
+
+    </form>
+
+    <!-- Aquí aparecerá la tabla de las 24 horas -->
+    <h2>Horario del día</h2>
+
+    <div id="hoursTable"></div>
+     <div class="actions">
+        <button id="notify-btn" class="secondary-btn">🔔 Activar Notificacions</button>
+        <button id="share-btn" class="secondary-btn">🔗 Compartir hora</button>
+      </div>
+    <script src="../js/horas.js"></script>
+
+</body>
+</html>
